@@ -1,11 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Space+Grotesk:wght@300..700&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+svg {
+  display: inline-block;
+}
+
+.rc-slider-handle:hover {
+  border-color: #fb6f92 !important;
+}
+
+.custom-slider .rc-slider-rail {
+  background-color: #ced4da;
+}
+
+.custom-slider .rc-slider-track {
+  background-color: red;
+}
+
+.custom-slider .rc-slider-track-1 {
+  background-color: #fb6f92;
+}
+
+.custom-slider .rc-slider-handle {
+  background-color: #fb6f92;
+  border: 2px solid #fb6f92;
+}
+
+.custom-slider .rc-slider-handle-1 {
+  background-color: #fb6f92;
+}
+
+.custom-slider .rc-slider-handle-dragging {
+  border-color: #fae0e4 !important;
+  box-shadow: 0 0 0 5px #fae0e4 !important;
 }

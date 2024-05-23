@@ -1,0 +1,32 @@
+.header-wrapper {
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+}
+
+
+.banner::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    max-width: 100%;
+    clip-path: polygon(100% 79%, 0% 100%, 100% 100%);
+
+}
+
+@media (max-width:767px) {
+    .banner::after {
+        clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+
+    }
+}
+
+@media (max-width:575px) {
+
+    .banner::after {
+        clip-path: polygon(100% 89%, 0% 100%, 100% 100%);
+
+    }
+}
