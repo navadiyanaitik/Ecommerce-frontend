@@ -3,8 +3,8 @@ import { Icon } from '@iconify/react'
 
 const Footer = () => {
     return (
-        <footer className='footer-container container'>
-            <div className='bg-black  py-12 '>
+        <footer className='footer-container clear-both bg-black'>
+            <div className='container py-12 '>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 p-5'>
                     <div className='col-span-1 lg:col-span-2'>
                         <div className='text-white text-base uppercase font-bold mb-[2vmax] pb-[15px] border-b-[#999] border-b border-solid'>support</div>

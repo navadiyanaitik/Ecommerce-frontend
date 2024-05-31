@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Icon } from '@iconify/react'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
     const location = useLocation();
     const path = location.pathname;
 
@@ -14,7 +15,7 @@ const Navbar = () => {
             <nav className='bg-white p-2 sm:p-5'>
                 <div className='container mx-auto h-full'>
                     <div className='nav-wrapper flex items-center justify-between p-1.5 h-full'>
-                        <div className='nav-logo font-medium text-2xl sm:text-3xl text-primary'>Fashion Hub</div>
+                        <div className='nav-logo font-medium text-2xl sm:text-3xl text-primary cursor-pointer' onClick={() => { navigate('/') }}>Fashion Hub</div>
                         <div className='nav-items hidden md:block '>
                             <ul className='m-0 p-0 flex items-center'>
                                 <li>

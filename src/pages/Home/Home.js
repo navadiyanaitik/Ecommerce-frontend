@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <Layout>
             <div className='home-container'>
-                <section className='header-container container mx-auto'>
+                <section className='header-container mx-auto'>
                     <Header />
                 </section>
                 <section className='container !mt-10'>

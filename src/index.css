@@ -54,3 +54,14 @@ svg {
   border-color: #fae0e4 !important;
   box-shadow: 0 0 0 5px #fae0e4 !important;
 }
+
+.product-img:nth-child(2n) {
+  margin-left: 1%;
+}
+
+.divider::after {
+  content: "|";
+  width: 15px;
+  text-align: center;
+  display: inline-block;
+}

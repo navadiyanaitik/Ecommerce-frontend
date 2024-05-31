@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ProductCard.css'
 import { Icon } from '@iconify/react'
 import Popup from '../Modal/Modal'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({ data }) => {
     console.log("🚀 ~ ProductCard ~ data:", data)
@@ -12,10 +13,10 @@ const ProductCard = ({ data }) => {
 
     return (
         <>
-            <div className='w-[210px] sm:max-w-none mx-auto xs:mx-2.5 mb-7 my- transition-all duration-300 relative group cursor-pointer'>
+            <Link to={`/product/${data?.id}`} className='w-[210px] sm:max-w-none mx-auto xs:mx-2.5 mb-7 my- transition-all duration-300 relative group cursor-pointer'>
                 <div className='overflow-hidden relative cursor-pointer'>
                     <div className='w-[210px] h-[280px]'>
-                        <img src={data.image[0]} className='w-full h-full  group-hover:scale-[105%] transition-all duration-[0.8s]' />
+                        <img src={data.image[0]} className='w-full h-full  group-hover:scale-[105%] transition-all duration-[0.8s]' alt='product' />
                     </div>
                     <div className='action-layer  absolute inset-y-0 right-0 py-3 px-2.5 flex flex-col group-hover:translate-x-0 translate-x-full transition-all duration-300 ease-in-out'>
                         <span className='group w-8 h-8 border bg-white flex justify-center items-center cursor-pointer mb-3 rounded-[50%] border-solid border-transparent'>
@@ -45,7 +46,7 @@ const ProductCard = ({ data }) => {
                     </div>
 
                 </div>
-            </div>
+            </Link>
             <Popup open={openModal} setOpen={setOpenModal} />
 
         </>

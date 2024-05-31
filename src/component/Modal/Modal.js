@@ -1,32 +1,33 @@
+import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
 import React from 'react'
-import Modal from 'react-modal';
-import './Modal.css';
 
-const Popup = ({ open, setOpen }) => {
-    let subtitle;
+const Popup = ({ open, closeModal, children }) => {
 
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
-    }
-
-    function closeModal() {
-        setOpen(false);
-    }
     return (
-        <Modal
-            isOpen={open}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            contentLabel="Example Modal"
-            overlayClassName="fixed z-[51] inset-0 bg-black bg-opacity-50"
-            className="absolute top-1/2 left-1/2 right-auto bottom-auto -mr-[50%] -translate-x-1/2 -translate-y-1/2 p-12 max-w-[90%]"
-        >
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-            <button onClick={closeModal}>close</button>
-            <div>I am a modal</div>
-
-        </Modal>
+        <Transition appear show={open}>
+            <Dialog as="div" className="relative z-10 focus:outline-none" onClose={closeModal}>
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto bg-gray-400 bg-opacity-50">
+                    <div className="flex min-h-full items-center justify-center p-4">
+                        <TransitionChild
+                            enter="ease-out duration-300"
+                            enterFrom="opacity-0 transform-[scale(95%)]"
+                            enterTo="opacity-100 transform-[scale(100%)]"
+                            leave="ease-in duration-200"
+                            leaveFrom="opacity-100 transform-[scale(100%)]"
+                            leaveTo="opacity-0 transform-[scale(95%)]"
+                        >
+                            <DialogPanel className="w-full max-w-md rounded-xl bg-white p-6 relative">
+                                <div className='text-2xl text-black inline-block absolute top-3 right-5 cursor-pointer' onClick={closeModal}><Icon icon="material-symbols:close" /></div>
+                                <div>
+                                    {children}
+                                </div>
+                            </DialogPanel>
+                        </TransitionChild>
+                    </div>
+                </div>
+            </Dialog>
+        </Transition>
     )
 }
 

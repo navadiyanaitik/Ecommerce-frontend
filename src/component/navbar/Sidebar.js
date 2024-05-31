@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Navbar.css'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import Popover from '../Popover/Popover';
 
 const Sidebar = ({ open, setOpen }) => {
-
+    const navigate = useNavigate();
     const location = useLocation();
     const path = location.pathname;
 
@@ -15,7 +15,7 @@ const Sidebar = ({ open, setOpen }) => {
         <>
             <div className={`fixed bg-white ${open ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 inset-y-0 left-0 w-auto z-50`}>
                 <div className="d-flex flex-column flex-shrink-0 p-3 sm:p-5 h-full bg-body-tertiary" style={{ width: '280px' }}>
-                    <div className='nav-logo font-medium text-2xl text-primary leading-[36px] px-0.5 sm:py-2.5'>Fashion Hub</div>
+                    <div className='nav-logo font-medium text-2xl text-primary leading-[36px] px-0.5 sm:py-2.5' onClick={() => { navigate('/') }}>Fashion Hub</div>
                     <hr className='my-2 mt-2.5' />
                     <div className="h-[calc(100%_-_48px)]  overflow-auto flex flex-col justify-between">
                         <ul >
@@ -45,7 +45,7 @@ const Sidebar = ({ open, setOpen }) => {
                             <Popover
                                 buttonContent={
                                     <div className='flex items-center'>
-                                        <img src='/images/profile.jpeg' className='w-10 h-10 rounded-full mr-2' />
+                                        <img src='/images/profile.jpeg' className='w-10 h-10 rounded-full mr-2' alt='profile' />
                                         <Icon icon="icon-park-solid:down-one" className='text-lg text-gray-500' />
                                     </div>
                                 }

@@ -46,7 +46,6 @@ export const MokeProductData = [
         stock: 154,
         image: [
             '/images/orange-t-shirt-1.jpg',
-            '/images/orange-t-shirt-2.jpg',
             '/images/orange-t-shirt-3.jpg',
             '/images/orange-t-shirt-4.jpg',
             '/images/orange-t-shirt-5.jpg',
