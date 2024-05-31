@@ -50,7 +50,7 @@ const ShippingDetails = ({ goToNextStep }) => {
                             <Icon icon="zondicons:network" className='text-2xl text-gray-500' />
                         </div>
                         <div className='flex-grow'>
-                            <ComboBox setSelected={setSelectedCountry} selected={selectedCountry} setQuery={setCountryQuery} filteredVal={filteredCountry} />
+                            <ComboBox setSelected={setSelectedCountry} selected={selectedCountry} setQuery={setCountryQuery} filteredVal={filteredCountry} placeholder="Country" />
                         </div>
                     </div>
                     <div className='flex h-12 border border-gray-400 mb-5'>

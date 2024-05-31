@@ -7,11 +7,12 @@ module.exports = {
         'primary': '#FF6A88',
         'danger': '#FF2424',
         'blue': '#336aea',
+        'success': '#29bf12',
       }
     },
     screens: {
       'xs': '500px',
-      
+
       'sm': '640px',
 
       'md': '768px',

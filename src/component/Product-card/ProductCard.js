@@ -5,7 +5,6 @@ import Popup from '../Modal/Modal'
 import { Link } from 'react-router-dom'
 
 const ProductCard = ({ data }) => {
-    console.log("🚀 ~ ProductCard ~ data:", data)
     const [openModal, setOpenModal] = useState(false);
     const handleModalOpen = () => {
         setOpenModal(!openModal);

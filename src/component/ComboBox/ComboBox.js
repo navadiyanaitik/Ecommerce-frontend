@@ -4,14 +4,14 @@ import clsx from 'clsx';
 import React from 'react'
 
 const ComboBox = (props) => {
-    const { selected, setSelected, setQuery, filteredVal = [] } = props;
+    const { selected, setSelected, setQuery, filteredVal = [], boxStyle } = props;
     return (
         <React.Fragment>
             <Combobox value={selected} onChange={(value) => setSelected(value)}>
-                <div className="relative w-full h-full">
+                <div className={`relative w-full h-full ${boxStyle}`}>
                     <ComboboxInput
                         className={clsx(
-                            'w-full h-full rounded-lg border-none bg-white/5 py-1.5 pr-8 pl-3 ',
+                            'w-full h-full rounded-lg border-none bg-white/5 py-1.5 pr-8 pl-3',
                             'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
                         )}
                         placeholder='country'
@@ -19,7 +19,7 @@ const ComboBox = (props) => {
                         onChange={(event) => setQuery(event.target.value)}
                     />
                     <ComboboxButton className="group absolute inset-y-0 right-0 px-2.5">
-                        <Icon icon='flowbite:chevron-down-outline' className="text-xl text-gray-500 group-data-[hover]:fill-white" />
+                        <Icon icon='flowbite:chevron-down-outline' className="text-xl text-gray-500" />
                     </ComboboxButton>
                 </div>
                 <Transition
@@ -30,7 +30,7 @@ const ComboBox = (props) => {
                 >
                     <ComboboxOptions
                         anchor="bottom"
-                        className="w-[var(--input-width)] rounded-xl border border-white/5 bg-white p-1 [--anchor-gap:var(--spacing-1)] empty:hidden"
+                        className="w-[var(--input-width)] rounded-xl border border-gray-300 bg-white p-1 [--anchor-gap:var(--spacing-1)] empty:hidden"
                     >
                         {filteredVal.map((person) => (
                             <ComboboxOption

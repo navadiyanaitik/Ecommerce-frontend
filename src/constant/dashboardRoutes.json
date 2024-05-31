@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Dashboard",
+        "icon": "material-symbols:dashboard",
+        "path": "/admin/dashboard"
+    },
+    {
+        "id": 2,
+        "title": "Products",
+        "icon": "fluent-mdl2:product-list",
+        "path": "/admin/product"
+    },
+    {
+        "id": 3,
+        "title": "Orders",
+        "icon": "material-symbols:order-approve-sharp",
+        "path": "/admin/orders"
+    },
+    {
+        "id": 4,
+        "title": "Users",
+        "icon": "mdi:users",
+        "path": "/admin/users"
+    },
+    {
+        "id": 5,
+        "title": "Reviews",
+        "icon": "mdi:comments-text",
+        "path": "/admin/reviews"
+    }
+]
