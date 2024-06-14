@@ -18,7 +18,7 @@ const Popup = ({ open, closeModal, children, modalStyle }) => {
                             leaveFrom="opacity-100 transform-[scale(100%)]"
                             leaveTo="opacity-0 transform-[scale(95%)]"
                         >
-                            <DialogPanel className={clsx(modalStyle, "w-full max-w-md rounded-xl bg-white p-6 relative")}>
+                            <DialogPanel className={clsx(modalStyle, "w-full max-w-md rounded-xl bg-white p-4 xs:p-6 relative")}>
                                 <div className='text-2xl text-black inline-block absolute top-3 right-5 cursor-pointer' onClick={closeModal}><Icon icon="material-symbols:close" /></div>
                                 <div>
                                     {children}

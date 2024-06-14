@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const CustomierReveiw = () => {
     return (
-        <div>
+        <div className='mb-10'>
             <div className='py-5 border-b border-[#eaeaec]'>
                 <div className='pl-9 relative'>
                     <div className='absolute left-0 top-1'>

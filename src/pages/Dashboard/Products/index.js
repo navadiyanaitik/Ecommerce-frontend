@@ -22,7 +22,7 @@ const AllProducts = () => {
                         <thead>
                             <tr>
                                 <th className='text-left p-2 bg-primary text-white'>Product ID</th>
-                                <th className='p-2 text-left bg-primary text-white'>Name</th>
+                                <th className='p-2 text-left bg-primary text-white min-w-[300px]'>Name</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white min-w-[100px]'>Stock</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white'>Price</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white'>Action</th>

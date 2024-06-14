@@ -23,8 +23,8 @@ const OrderDetails = () => {
     return (
         <React.Fragment>
             <DashLayout title='Order Details'>
-                <div className='flex flex-col md:flex-row items-start'>
-                    <div className='w-full md:w-3/5 lg:w-2/3 md:border-r border-stone-300 px-5 sm:px-10 pb-10'>
+                <div className='flex flex-col lg:flex-row items-start'>
+                    <div className='w-full lg:w-2/3 lg:border-r border-stone-300 pr-3 lg:pr-5 pb-10'>
                         <div className='mb-12'>
                             <h1 className='text-2xl sm:text-3xl font-semibold capitalize mb-10'>shipping info</h1>
                             <div className='flex items-center mb-3 text-sm sm:text-base'>
@@ -35,16 +35,16 @@ const OrderDetails = () => {
                                 <div className='w-[120px] mr-2'>Phone:</div>
                                 <p className='text-gray-500'>9876543210</p>
                             </div>
-                            <div className='flex flex-col sm:flex-row sm:items-center text-sm sm:text-base'>
+                            <div className='flex flex-col lg:flex-row lg:items-center text-sm sm:text-base'>
                                 <div className='w-[120px] mr-2'>Address:</div>
-                                <p className='text-gray-500 mt-2 sm:mt-0'>h-77 doc op, los angles,USA,465011,USA</p>
+                                <p className='text-gray-500 mt-2 lg:mt-0'>h-77 doc op, los angles,USA,465011,USA</p>
                             </div>
                         </div>
                         <div className='mb-12'>
                             <h1 className='text-2xl sm:text-3xl font-semibold capitalize mb-10'>Payment</h1>
                             <div className='mb-3 text-success font-semibold text-xl uppercase'>paid</div>
                             <div className='flex items-center mb-3 text-sm sm:text-base'>
-                                <div className='w-[120px] mr-2'>Ammount:</div>
+                                <div className='w-[120px] mr-2'>Amount:</div>
                                 <p className='text-gray-500'>&#8377;32225.75</p>
                             </div>
                         </div>
@@ -83,8 +83,8 @@ const OrderDetails = () => {
                         </div> */}
                         </div>
                     </div>
-                    <div className='w-full md:w-2/5 lg:w-1/3'>
-                        <div className='max-w-none md:max-w-[330px] w-full mx-auto p-5'>
+                    <div className='w-full lg:w-1/3'>
+                        <div className='max-w-none xs:max-w-[330px] w-full mx-auto p-5'>
                             <h1 className='capitalize text-center text-2xl font-medium pb-6 border-b-2 border-stone-300 mb-5'>Process Order</h1>
                             <div className='flex h-12 border border-gray-400 mb-5'>
                                 <div className='h-12 w-12 grid place-items-center border-r border-gray-400'>

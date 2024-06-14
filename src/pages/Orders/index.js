@@ -13,7 +13,7 @@ const Orders = () => {
                                 <th className='text-left p-2 bg-primary text-white'>Order ID</th>
                                 <th className='p-2 text-center bg-primary text-white'>Status</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white min-w-[100px]'>Items Qty</th>
-                                <th className='text-center p-2 bg-primary capitalize text-white'>Ammount</th>
+                                <th className='text-center p-2 bg-primary capitalize text-white'>Amount</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white'>Action</th>
                             </tr>
                         </thead>

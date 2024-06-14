@@ -13,7 +13,7 @@ const Home = () => {
                     <Header />
                 </section>
                 <section className='container !mt-10'>
-                    <h1 className='text-2xl sm:text-3xl md:text-4xl text-center font-medium mb-10' id='product-sec'>Featured Products</h1>
+                    <h1 className='text-2xl sm:text-3xl md:text-4xl text-center font-medium mb-10' id='products'>Featured Products</h1>
                     <div className='flex flex-wrap justify-between gap-2'>
                         {
                             MokeProductData.length > 0 &&

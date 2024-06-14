@@ -6,8 +6,8 @@ const Reviews = () => {
     return (
         <React.Fragment>
             <DashLayout title='All Reviews'>
-                <div className='flex justify-center items-center'>
-                    <div className='flex h-12 border border-gray-400 mr-3'>
+                <div className='flex flex-col md:flex-row justify-center items-center'>
+                    <div className='flex h-12 border border-gray-400 mb-3 md:mb-0 md:mr-3'>
                         <div className='h-12 w-12 grid place-items-center border-r border-gray-400'>
                             <Icon icon="iconoir:search" className='text-2xl text-gray-500' />
                         </div>
@@ -21,8 +21,8 @@ const Reviews = () => {
                         <thead>
                             <tr>
                                 <th className='text-left p-2 bg-primary text-white'>Review ID</th>
-                                <th className='p-2 text-left bg-primary text-white'>User</th>
-                                <th className='text-left p-2 bg-primary capitalize text-white min-w-[100px]'>Comment</th>
+                                <th className='p-2 text-left min-w-[200px] bg-primary text-white'>User</th>
+                                <th className='text-left p-2 min-w-[270px] bg-primary capitalize text-white'>Comment</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white'>Rating</th>
                                 <th className='text-center p-2 bg-primary capitalize text-white'>Action</th>
                             </tr>

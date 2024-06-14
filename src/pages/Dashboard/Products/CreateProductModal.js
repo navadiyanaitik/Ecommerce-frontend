@@ -48,14 +48,14 @@ const CreateProductModal = ({ open, closeModal }) => {
             <div>
                 <form className=''>
                     <div className='w-full'>
-                        <h1 className='text-2xl font-medium mb-5'>Create Product</h1>
-                        <div className='grid grid-cols-3 gap-x-3'>
-                            <div className='col-span-3 mb-3'>
+                        <h1 className='text-xl xs:text-2xl font-medium mb-5'>Create Product</h1>
+                        <div className='grid xs:grid-cols-2 sm:grid-cols-3 gap-x-3'>
+                            <div className='xs:col-span-2 sm:col-span-3 mb-3'>
                                 <input className='h-12 p-2 w-full outline-none border-2 focus:border-gray-500 transition-all duration-150 border-gray-400 rounded-md placeholder:text-gray-400' placeholder='Product Name' />
                                 <p className='mt-1.5 text-xs ps-1 text-danger opacity-0'>Product name is required</p>
                             </div>
 
-                            <div className='col-span-3 mb-3'>
+                            <div className='xs:col-span-2 sm:col-span-3 mb-3'>
                                 <textarea className='w-full border-2 border-gray-400 focus:border-gray-500 rounded-md outline-none p-3' placeholder='Product Description' />
                                 <p className='text-xs ps-1 text-danger opacity-0'>Product name is required</p>
                             </div>
@@ -79,15 +79,18 @@ const CreateProductModal = ({ open, closeModal }) => {
                         <input type='file' hidden multiple id='product-file' onChange={(e) => { handleFileChange(e.target.files) }} />
                         <label htmlFor='product-file' className=' inline-block bg-primary p-2 text-white rounded-sm cursor-pointer text-sm'>Upload Files</label>
                     </div>
-                    <div className='grid grid-cols-5 mt-5 gap-5'>
+                    <div className='grid grid-cols-2 xs:grid-cols-4 sm:grid-cols-5 mt-5 gap-5'>
                         {
                             imagePreviews.length > 0 &&
                             imagePreviews.map((img, index) => {
                                 return (
                                     <div className='w-24 h-28 relative group overflow-hidden' key={index}>
                                         <img src={img} className='w-full h-full object-cover group-hover:scale-105 duration-500 transition-all' />
-                                        <span className='absolute inset-0 flex items-center justify-center transition-all  duration-300 opacity-0 group-hover:opacity-100 group-hover:bg-red-800/50'>
-                                            <Icon icon="material-symbols:delete" className='text-white text-2xl cursor-pointer' onClick={() => handleRemoveFile(index)} />
+                                        <span className='absolute inset-0 flex items-center justify-center transition-all  duration-300 md:opacity-0 group-hover:md:opacity-100 group-hover:md:bg-red-800/50'>
+                                            <span className='w-8 h-8 bg-black/50 flex items-center justify-center rounded-full'>
+                                                <Icon icon="material-symbols:delete" className='text-white text-xl md:text-2xl cursor-pointer' onClick={() => handleRemoveFile(index)} />
+
+                                            </span>
                                         </span>
                                     </div>
                                 )
